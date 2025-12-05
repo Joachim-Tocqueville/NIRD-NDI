@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat - Type de personne</title>
+
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 40px;
+            background: linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        .intro-box {
+            width: 80%;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #4e4e4e;
+            background: #111;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        h2 {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .accordion-container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .accordion {
+            background: #111;
+            border-radius: 15px;
+            padding: 18px 25px;
+            margin: 12px 0;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border: 3px solid transparent;
+            background-image: linear-gradient(#111, #111),
+                            linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+
+
+        
+        .accordion:hover {
+            background-image: linear-gradient(#111, #111),
+                            linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+        }
+
+
+        .arrow {
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            background: #111;
+            border-radius: 0 0 15px 15px;
+
+            border: 3px solid transparent;
+            
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+
+            transition: max-height 0.4s ease;
+            padding: 0 20px;
+        }
+
+
+        .panel-content {
+            display: flex;
+            gap: 30px;
+            padding: 25px 10px;
+        }
+
+        .panel-content img {
+            width: 50%;
+            height: 200px;
+            background: #222;
+            border-radius: 12px;
+        }
+
+        .panel-text {
+            width: 50%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .panel-columns {
+            display: flex;
+            gap: 25px;
+            padding: 25px 10px;
+        }
+
+.panel-columns .col {
+    width: 50%;
+    text-align: left;
+}
+
+.panel-columns img {
+    width: 100%;
+    height: 200px;
+    background: #222;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.panel-columns p {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+@media (max-width: 800px) {
+    .panel-columns {
+        flex-direction: column;
+    }
+    .panel-columns .col {
+        width: 100%;
+    }
+    .panel-columns img {
+        height: 180px;
+    }
+}
+
+
+        @media (max-width: 800px) {
+            .panel-content {
+                flex-direction: column;
+            }
+            .panel-content img,
+            .panel-text {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Félicitations ! Nous avons établi le type de personne que vous êtes</h1>
+
+    <div class="intro-box">
+        Félicitations ! Nous avons identifié le type de personne que vous êtes à travers vos réponses. <br><br>
+        Vous êtes catégorisé comme une personne qui valorise avant tout la qualité et la performance dans le domaine numérique.
+        Pour vous, investir dans des outils payants n'est pas une contrainte, mais un choix stratégique : vous préférez mettre 
+        le prix afin de bénéficier des meilleures fonctionnalités, d'une expérience fluide et de rendus professionnels. <br><br>
+        Votre vision est claire : selon vous, les logiciels gratuits, bien qu'utiles dans certains cas, ne peuvent pas rivaliser
+        avec les logiciels payants en termes de fiabilité, de précision et de qualité globale. Vous associez les solutions premium
+        à une garantie de résultats optimaux, et vous considérez que cet investissement reflète votre exigence et votre recherche
+        constante d'excellence.
+    </div>
+
+    <h2>Vous voulez en savoir davantage sur les types de logiciels ?</h2>
+
+    <div class="accordion-container">
+
+        <div class="accordion">Meilleur logiciel pour de la 3D ? <span class="arrow">›</span></div>
+        <div class="panel">
+    <div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/3ds_max.jpg" alt="3D">
+            <p>
+                Les avantages des logiciels payants sont que la qualité est au rendez-vous, 
+                cela est une bonne proposition pour les grandes entreprises car il y a des formules.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/blender.jpg" alt="3D">
+            <p>
+                Les désavantages des logiciels gratuits sont que la qualité est peut-être 
+                moins au rendez-vous. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+        <div class="accordion">Meilleur logiciel pour l'animation ? <span class="arrow">›</span></div>
+        <div class="panel">
+    <div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/autodesk_maya.jpg" alt="animation">
+            <p>
+                Les logiciels d'animation payants offrent une fluidité professionnelle et des outils avancés,
+                    mais nécessitent un investissement important. Très utilisés en studio.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/blender.jpg" alt="animation">
+            <p>
+                Les désavantages des logiciels gratuits sont que la qualité est peut-être 
+                moins au rendez-vous. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+        <div class="accordion">Meilleur logiciel IA ? <span class="arrow">›</span></div>
+        <div class="panel">
+    <div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/midjourney.jpg" alt="IA">
+            <p>
+                Les logiciels IA premium offrent une meilleure précision, des modèles plus grands et un support solide.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/daz_studio.jpg" alt="IA">
+            <p>
+                Les désavantages des logiciels IA gratuits sont que la qualité est peut-être 
+                moins au rendez-vous et que les demandent sont plus restreintes. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+        
+
+        <div class="accordion">Meilleur logiciel pour du texte ? <span class="arrow">›</span></div>
+        <div class="panel">
+
+<div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/word.jpg" alt="texte">
+            <p>
+                Les outils payants de rédaction proposent un meilleur confort, des fonctions avancées et un support complet. Très utilisés en entreprises.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/libreoffice.jpg" alt="texte">
+            <p>
+                Les désavantages des logiciels gratuits sont que les propositions de personnalisations sont peut-être 
+                moins variés. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+        <br><br>
+
+        <div class="accordion">Meilleur système d'exploitation ? <span class="arrow">›</span></div>
+        <div class="panel">
+
+            <div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/windows_mac.jpg" alt="OS">
+            <p>
+                Les OS payants sont souvent plus stables et sécurisés, mais demandent un investissement significatif.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/linux.jpg" alt="OS">
+            <p>
+                Les désavantages des logiciels gratuits sont que les propositions de personnalisations sont peut-être 
+                moins variés. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+        <div class="accordion">Meilleur logiciel de design ? <span class="arrow">›</span></div>
+        <div class="panel">
+<div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/photoshop_illustrator.jpg" alt="Design">
+            <p>
+                Les logiciels de design professionnels (Adobe, etc.) fournissent des outils très complets mais coûteux.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/inkscape.jpg" alt="Design">
+            <p>
+                Les désavantages des logiciels gratuits sont que les propositions de personnalisations sont peut-être 
+                moins variés. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+        <div class="accordion">Meilleur logiciel de montage vidéo ? <span class="arrow">›</span></div>
+        <div class="panel">
+
+<div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/premiere_pro.jpg" alt="Montage vidéo">
+            <p>
+                Les logiciels premium permettent un rendu de haute qualité, indispensable pour un rendu pro.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/davinci_resolve.jpg" alt="Montage vidéo">
+            <p>
+                Les désavantages des logiciels gratuits sont que les propositions de personnalisations sont peut-être 
+                moins variés. <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens comme les étudiants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+        <div class="accordion">Meilleur système de messagerie ? <span class="arrow">›</span></div>
+        <div class="panel">
+<div class="panel-columns">
+        
+        <div class="col">
+            <img src="./Imgs/outlook.jpg" alt="Messagerie">
+            <p>
+                Les logiciels payants sont fiables, performants et sécurisés, adaptés aux entreprises.
+                <br><br>
+                Cependant, le logiciel reste peu accessible pour les personnes avec de faibles moyens comme les petites entreprises.
+            </p>
+        </div>
+
+        <div class="col">
+            <img src="./Imgs/thunderbird.jpg" alt="Messagerie">
+            <p>
+                Les désavantages des logiciels gratuits sont qu'ils sont moins sécurisés. 
+                <br><br>
+                Mais cela reste une bonne proposition pour les personnes avec de faibles moyens.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+
+        accordions.forEach((acc, i) => {
+            acc.addEventListener("click", () => {
+
+                accordions.forEach((other, j) => {
+                    if (i !== j) {
+                        other.classList.remove("active");
+                        const p = other.nextElementSibling;
+                        p.style.maxHeight = null;
+                        other.querySelector(".arrow").style.transform = "rotate(0deg)";
+                    }
+                });
+
+                const panel = acc.nextElementSibling;
+                const arrow = acc.querySelector(".arrow");
+
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    arrow.style.transform = "rotate(0deg)";
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    arrow.style.transform = "rotate(90deg)";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz – Type de personne</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            background: linear-gradient(90deg, #1F67AE, #DC5ED4,#F99EB1, #fed464);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #1F67AE, #DC5ED4,#F99EB1, #fed464);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            max-width: 900px;
+        }
+
+        .big-box {
+    width: 300px;
+    height: 300px;      /* carré parfait */
+    margin: 40px auto;
+    border: 3px solid #ffd86b;
+    border-radius: 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .big-box img.big-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ou contain selon ce que tu veux */
+    border-radius: 20px;
+    
+}
+.big-image {
+    width: 90%;
+    height: 90%;
+    object-fit: contain; 
+    border-radius: 15px;
+}
+
+
+        .question {
+            margin: 30px 0;
+            padding: 20px;
+            background: #111;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .question p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            /* fond sombre + bordure en dégradé (le dégradé n'affecte que la bordure) */
+            background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+            background-origin: padding-box, border-box;
+            background-clip: padding-box, border-box;
+            border: 2px solid transparent;
+            position: relative;
+            transition: transform 0.08s ease;
+            vertical-align: middle;
+            outline: none;
+        }
+
+        input[type="checkbox"]:hover {
+            transform: scale(1.03);
+        }
+
+        /* coche */
+        input[type="checkbox"]::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 1px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.12s ease;
+        }
+
+        input[type="checkbox"]:checked::after {
+            opacity: 1;
+        }
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 15px 35px;
+            border-radius: 12px;
+            background-color: black;
+            /* texte en dégradé de gauche à droite */
+            background-image: linear-gradient(90deg, #1F67AE, #DC5ED4, #F99EB1, #fed464);
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-size: 18px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 3px solid white;
+            text-align: center;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Hello !</h1>
+
+    <div class="container">
+        
+        <div class="big-box">
+            <img src="imgs/bd.jpg" alt="Illustration" class="big-image">
+        </div>
+
+        <h2>Voulez-vous savoir quel type de personne vous êtes ?</h2>
+
+        <!-- QUESTIONS -->
+        
+        <div class="question">
+            <p>1. Quand vous devez choisir un logiciel pour un projet important, vous privilégiez :</p>
+            <label>
+                <input type="radio" name="q1" value="A"> A. Le logiciel payant reconnu pour sa qualité et son support technique.
+            </label>
+            <label><input type="radio" name="q1" value="B" > B. Le logiciel libre, car il est gratuit et souvent suffisant.</label>
+        </div>
+
+        <div class="question">
+            <p>2. Quelle est votre perception des logiciels gratuits ?</p>
+            <label><input type="radio" name="q2" value="A"> A. Ils sont utiles pour débuter, mais ne peuvent pas rivaliser avec les logiciels payants.</label>
+            <label><input type="radio" name="q2" value="B"> B. Certains logiciels libres surpassent même les solutions payantes.</label>
+        </div>
+
+        <div class="question">
+            <p>3. Si un logiciel payant coûte 50€/mois mais garantit un rendu professionnel, vous…</p>
+            <label><input type="radio" name="q3" value="A"> A. Investissez sans hésiter, car la qualité prime.</label>
+            <label><input type="radio" name="q3" value="B"> B. Cherchez une alternative gratuite, quitte à passer plus de temps à l’adapter.</label>
+        </div>
+
+        <div class="question">
+            <p>4. Pour vous, la valeur d’un logiciel se mesure surtout à :</p>
+            <label><input type="radio" name="q4" value="A"> A. Sa performance, son ergonomie et son support client.</label>
+            <label><input type="radio" name="q4" value="B"> B. Sa communauté active, sa gratuité et sa flexibilité.</label>
+        </div>
+
+        <div class="question">
+            <p>5. Face à un bug ou une difficulté technique, vous préférez :</p>
+            <label><input type="radio" name="q5" value="A"> A. Avoir accès à un support officiel réactif (logiciel payant).</label>
+            <label><input type="radio" name="q5" value="B"> B. Compter sur des forums et communautés d’utilisateurs (logiciel libre).</label>
+        </div>
+
+        <div class="question">
+            <p>6. Dans vos projets créatifs (design, vidéo, musique...), vous utilisez :</p>
+            <label><input type="radio" name="q6" value="A"> A. Des logiciels payants comme Adobe, Final Cut, etc.</label>
+            <label><input type="radio" name="q6" value="B"> B. Le logiciel libre, car il est gratuit et souvent suffisant.</label>
+        </div>
+
+        <div class="question">
+            <p>7. Votre philosophie générale concernant les outils numériques est :</p>
+            <label><input type="radio" name="q7" value="A"> A. “La qualité a un prix, et je suis prêt à le payer.”</label>
+            <label><input type="radio" name="q7" value="B"> B. “Pourquoi payer si le gratuit fait le travail ?!”</label>
+        </div>
+
+        <div class="question">
+            <p>8. Si vous deviez conseiller un ami débutant, vous lui diriez :</p>
+            <label><input type="radio" name="q8" value="A"> A. D’investir directement dans des logiciels payants pour progresser plus vite.</label>
+            <label><input type="radio" name="q8" value="B"> B. De commencer avec des logiciels libres pour limiter les coûts.</label>
+        </div>
+
+        <div class="question">
+            <p>9. Quelle importance accordez-vous aux mises à jour régulières et officielles ?</p>
+            <label><input type="radio" name="q9" value="A"> A. Très importante, c’est un gage de sécurité et de fiabilité.</label>
+            <label><input type="radio" name="q9" value="B"> B. Moyenne, tant que la communauté propose des correctifs.</label>
+        </div>
+
+        <div class="question">
+            <p>10. Votre profil se rapproche le plus de :</p>
+            <label><input type="radio" name="q10" value="A"> A. Le perfectionniste digital : prêt à investir pour obtenir le meilleur rendu.</label>
+            <label><input type="radio" name="q10" value="B"> B. L’économe pragmatique : malin, qui optimise ses ressources avec des solutions libres.</label>
+        </div>
+
+        <a href="#" class="btn" id="validate">Découvrir le résultat</a>
+
+
+    </div>
+<script>
+document.getElementById("validate").addEventListener("click", function (e) {
+    e.preventDefault(); // Bloque le lien normal
+
+    let scoreA = 0;
+    let scoreB = 0;
+
+    // Parcourt toutes les questions (q1 à q10)
+    for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        
+        if (selected) {
+            if (selected.value === "A") scoreA++;
+            else if (selected.value === "B") scoreB++;
+        }
+    }
+
+    // Vérifie s’il manque des réponses
+    if (scoreA + scoreB < 10) {
+        alert("Veuillez répondre à toutes les questions !");
+        return;
+    }
+
+    // Redirection selon le score
+    if (scoreA > scoreB) {
+        window.location.href = "resultat-A.html"; // page pour les A
+    } else {
+        window.location.href = "resultat-B.html"; // page pour les B
+    }
+});
+</script>
+
+</body>
+</html>
